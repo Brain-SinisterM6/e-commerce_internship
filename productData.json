@@ -1,0 +1,156 @@
+[ {
+          "prod_id":"1",
+          "name": "jewellery",
+          "picture": "images/images/products/acc1.jpg",
+          "old_price": "300",
+          "price": "240",
+          "detials":"consists of decorative items worn for personal adornment, such as brooches, rings, necklaces, earrings, pendants, bracelets, and cufflinks. Jewellery may be attached to the body or the clothes. From a western perspective, the term is restricted to durable ornaments, excluding flowers for example. For many centuries metal, often combined with gemstones, has been the normal material for jewellery, but other materials such as shells and other plant materials may be used"
+        },
+        {
+          "prod_id":"2",
+          "name": "ring",
+          "picture": "images/images/products/acc2.jpg",
+          "old_price": "500",
+          "price": "340",
+          "detials":"A ring is a round band, usually of metal, worn as ornamental jewellery. The term 'ring' by itself always denotes jewellery worn on the finger; when worn as an ornament elsewhere, the body part is specified"
+        },
+        {
+          "prod_id":"3",
+          "name": "dress1",
+          "picture": "images/images/products/dress1.jpeg",
+          "old_price": "300",
+          "price": "240",
+          "detials":"is a garment traditionally worn by women or girls consisting of a skirt with an attached bodice (or a matching bodice giving the effect of a one-piece garment)"
+        },
+        {
+          "prod_id":"4",
+          "name": "dress",
+          "picture": "images/images/products/dress2.jpeg",
+          "old_price": "800",
+          "price": "700",
+          "detials":"It consists of a top piece that covers the torso and hangs down over the legs. A dress can be any one-piece garment containing a skirt of any length and can be formal or casual."
+        },
+        {
+          "prod_id":"5",
+          "name": "blazer",
+          "picture": "images/images/products/blazer1.jpeg",
+          "old_price": "600",
+          "price": "540",
+          "detials":"A blazer is a type of jacket resembling a suit jacket, but cut more casually. A blazer is generally distinguished from a sport coat as a more formal garment and tailored from solid colour fabrics."
+        },
+        {
+          "prod_id":"6",
+          "name": "Jacket",
+          "picture": "images/images/products/blazer2.jpeg",
+          "old_price": "400",
+          "price": "350",
+          "detials":"Blazers often have naval-style metal buttons to reflect their origins as jackets worn by boating club membersA blazers cloth is usually durable, as it is intended as outdoor wear."
+        },
+        {
+          "prod_id":"7",
+          "name": "math book",
+          "picture": "images/images/products/book1.jpg",
+          "old_price": "120",
+          "price": "100",
+          "detials":"Mathematics (from Greek μάθημα máthēma, 'knowledge, study, learning') includes the study of such topics as quantity (number theory),[1] structure (algebra),[2] space (geometry),[1] and change (mathematical analysis).[3][4][5] It has no generally accepted definition."
+        },
+        {
+          "prod_id":"8",
+          "name": "English book",
+          "picture": "images/images/products/book2.jpg",
+          "old_price": "240",
+          "price": "90",
+          "detials":"English is a West Germanic language that was first spoken in early medieval England and eventually became a global lingua franca.[4][5] It is named after the Angles"
+        },
+        {
+          "prod_id":"9",
+          "name": "rains",
+          "picture": "images/images/products/book3.jpg",
+          "old_price": "300",
+          "price": "240",
+          "detials":"Rain is liquid water in the form of droplets that have condensed from atmospheric water vapor and then become heavy enough to fall under gravity"
+        },
+        {
+          "prod_id":"10",
+          "name": "fifa20",
+          "picture": "images/images/products/fif20.jpg",
+          "old_price": "300",
+          "price": "240",
+          "detials":"Powered by Frostbite™*, EA SPORTS™ FIFA 20 for the PlayStation 4, Xbox One, and PC brings two sides of The Worlds Game to life - the prestige of the professional stage and an all-new authentic street football experience in EA SPORTS VOLTA FOOTBALL."
+        },
+        {
+          "prod_id":"11",
+          "name": "pes2020",
+          "picture": "images/images/products/pes20.jpg",
+          "old_price": "150",
+          "price": "80",
+          "detials":"*Featured Players obtained in eFootball PES 2020 are only usable in ... data is frequently synchronised with real world football data through PES Live Updates."
+        },
+        {
+          "prod_id":"12",
+          "name": "fridge",
+          "picture": "images/images/products/frid1.jpg",
+          "old_price": "5000",
+          "price": "3000",
+          "detials":"A refrigerator (colloquially fridge) consists of a thermally insulated compartment and a heat pump (mechanical, electronic or chemical) that transfers heat from the inside of the fridge to its external environment so that the inside of the fridge"
+        },
+        {
+          "prod_id":"13",
+          "name": "fridge new",
+          "picture": "images/images/products/frid2.jpg",
+          "old_price": "3000",
+          "price": "2400",
+          "detials":"A refrigerator (colloquially fridge) consists of a thermally insulated compartment and a heat pump (mechanical, electronic or chemical) that transfers heat from the inside of the fridge to its external environment so that the inside of the fridge"
+        },
+        {
+          "prod_id":"14",
+          "name": "microwave",
+          "picture": "images/images/products/mic1.jpg",
+          "old_price": "900",
+          "price": "800",
+          "detials":"Microwaves are a form of electromagnetic radiation with wavelengths ranging from about one meter to one millimeter; with frequencies between 300 MHz (1 m) and 300 GHz (1 mm).[1][2][3][4][5] Different sources define different frequency ranges as microwaves"
+        },
+        {
+          "prod_id":"15",
+          "name": "machine",
+          "picture": "images/images/products/wash1.jpg",
+          "old_price": "3000",
+          "price": "2400",
+          "detials":"A washing machine (laundry machine, clothes washer, or washer) is a home appliance used to wash laundry. The term is mostly applied to machines that use water as opposed to dry cleaning (which uses alternative cleaning fluids and is performed by specialist businesses) or ultrasonic cleaners"
+        },
+        {
+
+          "prod_id":"16",
+          "name": "iphone11",
+          "picture": "images/images/products/mob1.jpg",
+          "old_price": "12000",
+          "price": "11400",
+          "detials":"The iPhone 11 is a smartphone designed, developed, and marketed by Apple Inc. It is the thirteenth generation lower-priced iPhone, succeeding the iPhone XR. It was unveiled on September 10, 2019,"
+        },
+        {
+          "prod_id":"17",
+          "name": "samsung s10",
+          "picture": "images/images/products/mob2.jpg",
+          "old_price": "9000",
+          "price": "8400",
+          "detials":"Samsung (Korean: 삼성; Hanja: 三星; Korean pronunciation: [samsʌŋ]; means 'three stars' in English) is a South Korean multinational conglomerate headquartered in Samsung Town, Seoul.[1] It comprises numerous affiliated businesses,"
+        },
+        {
+          "prod_id":"18",
+          "name": "labtop hp",
+          "picture": "images/images/products/lap1.jpg",
+          "old_price": "3000",
+          "price": "2400",
+          "detials":"A laptop (also laptop computer), often called a notebook, is a small, portable personal computer (PC) with a 'clamshell' form factor, typically having a thin LCD or LED computer screen mounted on the inside of the upper lid "
+        },
+        {
+          "prod_id":"19",
+          "name": "laptop dell",
+          "picture": "images/images/products/lap2.jpg",
+          "old_price": "4000",
+          "price": "3400",
+          "detials":"A laptop (also laptop computer), often called a notebook, is a small, portable personal computer (PC) with a 'clamshell' form factor, typically having a thin LCD or LED computer screen mounted on the inside of the upper lid"
+        }
+
+  
+  ]
