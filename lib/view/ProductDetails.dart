@@ -160,19 +160,28 @@ class _ProductDetailsState extends State<ProductDetails> {
                   onPressed: () {
 
                     setState(() {
-                      var map={};
-                      map['name'] = widget.Finalprodcut_name;
-                      map['picture'] =widget.Finalprodcut_picture;
-                      map['price'] =widget.Finalprodcut_price;
-                      map['quantity'] ='1';
-                      map['id'] = widget.loginUserId;
 
 
-                    /*  Navigator.push(
+                      Provider.of<addCart>(context,listen: false ).destoryAll();
+                      var map = {};
+                      map['name'] =
+                          widget.Finalprodcut_name;
+                      map['picture'] =
+                          widget.Finalprodcut_picture;
+                      map['price'] =
+                          widget.Finalprodcut_price;
+                      map['quantity'] =
+                      '1';
+                      map['id'] = widget.Finalprodcut_id;
+                      Provider.of<addCart>(context,listen: false ).addData(map);
+
+                      map = {};
+
+                      Navigator.push(
                           context,
                           new MaterialPageRoute(
                               builder: (context) =>
-                                  cart(widget.attributeMap, widget.loginUserId)));*/
+                                  cart( )));
 
 
                     });
@@ -271,7 +280,41 @@ class _ProductDetailsState extends State<ProductDetails> {
 
                     map = {};
                   });
+                  setState(() {
+
+                    colorchange=true;
+                  });
+                  showModalBottomSheet(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return Container(
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                child: Text(
+                                  "Added to Favourite list ",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Expanded(
+                                child: FlatButton(
+                                  onPressed: () => Navigator.pop(context),
+                                  child: Text("close",
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.green)),
+                                ),
+                              ),
+                            ],
+                          ),
+                          height: 50,
+                        );
+                      });
                 },
+
                 color: Colors.black,
               ),
             ],
