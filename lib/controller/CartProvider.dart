@@ -4,7 +4,7 @@ class addCart extends ChangeNotifier
 {
   var attributeMap = <Map>[];
 
-  int total=0;
+  double total=0;
 
   void addData(Map input){
     int check=0;
@@ -42,7 +42,7 @@ class addCart extends ChangeNotifier
     for(int i=0;i<attributeMap.length;i++)
     {
 
-      total+=int.parse(attributeMap[i]['price'])*int.parse(attributeMap[i]['quantity']);
+      total+=double.parse(attributeMap[i]['price'])*double.parse(attributeMap[i]['quantity']);
 
     }
     return total;
@@ -54,7 +54,6 @@ class addCart extends ChangeNotifier
   }
 
   GetData(){
-    print(attributeMap);
     return attributeMap;
   }
 

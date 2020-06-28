@@ -19,7 +19,7 @@ void main() {
       child: MaterialApp(
       title: 'E-commerce ',
 
-      home: login(),
+      home: HomePage(1),
       routes:
       {
      //   '/homepage': (context) => HomePage(1,''),

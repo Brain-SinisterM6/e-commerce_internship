@@ -8,7 +8,7 @@ import 'home_page.dart';
 
 class cart extends StatefulWidget{
 
-  int total=0;
+  double total=0;
   var attributeMap = <Map>[];
 
   String loginUserId;
@@ -37,11 +37,11 @@ class  _cartState extends State<cart>{
           //3shan l shadow bta3ha
           elevation: 0.1,
           backgroundColor: Colors.black,
-          leading:new IconButton(
-            icon: new Icon(Icons.arrow_back, color: Colors.white),
+          leading:  IconButton(
+            icon:   Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () => Navigator.of(context).push(
               //passing values
-                new MaterialPageRoute(
+                  MaterialPageRoute(
                     builder: (context) =>HomePage(1))),
 
           ),
@@ -121,7 +121,7 @@ class  _cartState extends State<cart>{
                               ),
                             ),
                             trailing: Text(
-                                "Total   ${(int.parse(widget.attributeMap[index]['price'])) * (int.parse(widget.attributeMap[index]['quantity']))} ",
+                                "Total   ${(double.parse(widget.attributeMap[index]['price'])) * (int.parse(widget.attributeMap[index]['quantity']))} ",
                                 style:
                                 TextStyle(color: Colors.black,  )),
                             title: Text(

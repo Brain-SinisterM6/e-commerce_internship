@@ -71,6 +71,13 @@ flutter:
     - images/pic4.jpeg
     - images/pic5.jpeg
     - images/pic6.jpeg
+
+    - images/Electronics/pic1.jpg
+    - images/Electronics/pic2.jpg
+    - images/Electronics/pic3.jpg
+    - images/Electronics/pic4.jpg
+    - images/Electronics/pic5.jpg
+
     - images/images/cats/accessories.png
     - images/images/cats/books.png
     - images/images/cats/clothes.png

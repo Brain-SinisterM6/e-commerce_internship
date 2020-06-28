@@ -1,5 +1,6 @@
  import 'package:ecommerceapp/controller/MyData.dart';
 import 'package:ecommerceapp/controller/UserId_provider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
@@ -26,6 +27,7 @@ class _prodcutsState extends State<prodcuts> {
     // TODO: implement initState
     super.initState();
 
+    print("${3999.0+2}");
     widget.loginUserId= Provider.of<getuserid>(context,listen: false ).GetData();
     setState(() {
       getProductData();
@@ -47,11 +49,13 @@ class _prodcutsState extends State<prodcuts> {
         itemCount: produc_list.length,
 
         padding: EdgeInsets.all(5),
+
         //3dd l column
         gridDelegate:
-        new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,crossAxisSpacing: 3,mainAxisSpacing: 3),
         // kol item h3mlu stateless hnadi 3leha
         itemBuilder: (BuildContext context, int index) {
+
           return every_product(
               produc_list[index]['prod_id'],
               produc_list[index]['name'],
@@ -66,6 +70,7 @@ class _prodcutsState extends State<prodcuts> {
         }):SpinKitThreeBounce(
       color: Colors.black,
       size: 50.0,
+
     );
   }
 
@@ -102,75 +107,75 @@ class every_product extends StatelessWidget {
           border: Border.all(width: 1,color: Colors.black),
           borderRadius: BorderRadius.all(Radius.circular(20))
       ),
-      child: Card(
-        child: Hero(
-          tag: prodcut_name,
-          child: Material(
-            color: Colors.white,
-            child: InkWell(
-              onTap: () => Navigator.of(context).push(
-                //passing values
-                    MaterialPageRoute(
-                      builder: (context) =>   ProductDetails(prodcut_name,
-                          prodcut_picture, prodcut_oldprice, prodcut_price,
-                          prodcut_detials,prodcut_id ))),
-              child: GridTile(
-                child: Image.asset(
-                  prodcut_picture,
-                  fit: BoxFit.cover,
-                ),
-                footer: Container(
-                  color: Colors.white.withOpacity(0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(.7),
-                        border: Border.all(width: 1,color: Colors.black),
-                        borderRadius: BorderRadius.all(Radius.circular(20))
-                    ),
-                    height: 50,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.all(5),
-                        ),
+      child:InkWell(
+        onTap: () => Navigator.of(context).push(
+          //passing values
+            MaterialPageRoute(
+                builder: (context) =>   ProductDetails(prodcut_name,
+                    prodcut_picture, prodcut_oldprice, prodcut_price,
+                    prodcut_detials,prodcut_id ))),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              color: Colors.white.withOpacity(0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(.7),
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
+                 ),
+                alignment: Alignment.center,
 
-                        Expanded(child:  Text(
-                          "Price: \$$prodcut_price",
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),),
-                        Expanded(child: Text(
-                          "From: \$$prodcut_oldprice",
-                          style: TextStyle(
-                              color: Colors.red,
-                              decoration: TextDecoration.lineThrough,
-                              fontWeight: FontWeight.bold),
-                        ),)
-                      ],
-                    ),
-                  ),
+                child: Text(prodcut_name,style: TextStyle(color: Colors.white),),
+                height: 30,
+              ),
+            ),
+            Expanded(
+              child:Padding(
+                padding: EdgeInsets.only(top: 2,bottom: 2),
+                child:  Image.asset(
+                  prodcut_picture,
+                  fit: BoxFit.cover
+                  ,
+
                 ),
-                header: Container(
-                  color: Colors.white.withOpacity(0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(.7),
-                        border: Border.all(width: 1,color: Colors.black),
-                        borderRadius: BorderRadius.all(Radius.circular(20))
+              )
+            ),
+            Container(
+              color: Colors.white.withOpacity(0),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.black.withOpacity(.7),
+                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft: Radius.circular(20)),
+                ),
+                height: 50,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(5),
                     ),
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(4),
-                    child: Text(prodcut_name,style: TextStyle(color: Colors.white),),
-                    height: 30,
-                  ),
+
+                    Expanded(child:  Text(
+                      "Price: \$$prodcut_price",
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),),
+                    Expanded(child: Text(
+                      "From: \$$prodcut_oldprice",
+                      style: TextStyle(
+                          color: Colors.red,
+                          decoration: TextDecoration.lineThrough,
+                          fontWeight: FontWeight.bold),
+                    ),)
+                  ],
                 ),
               ),
             ),
-          ),
+
+          ],
         ),
       ),
-      padding: EdgeInsets.all(3),
     );
   }
 }

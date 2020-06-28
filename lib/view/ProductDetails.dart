@@ -83,7 +83,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         ],
       ),
       backgroundColor: Colors.white,
-      body: new ListView(
+      body:   ListView(
         children: <Widget>[
           Container(
             /**/
@@ -91,61 +91,69 @@ class _ProductDetailsState extends State<ProductDetails> {
             height: 300.0,
             color: Colors.white,
             padding: EdgeInsets.fromLTRB(5, 5, 5, 0),
-            child: GridTile(
-              child: Container(
-                alignment: Alignment.center,
-                color: Colors.white,
-                child: Image.asset(widget.Finalprodcut_picture),
-              ),
-              footer:  Container(
-                color: Colors.white.withOpacity(0),
-                child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+
+                Container(
+                  color: Colors.white.withOpacity(0),
+                  child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(.7),
-                        border: Border.all(width: 1,color: Colors.black),
-                        borderRadius: BorderRadius.all(Radius.circular(20))
-                    ),
-                    height: 50,
-                    child: ListTile(
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Expanded(
-                            child: Text('Price: \$${widget.Finalprodcut_oldprice}',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white)),
-                          ),
-                          Expanded(
-                            child: Text('From: \$${widget.Finalprodcut_price}',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.red,
-                                  decoration: TextDecoration.lineThrough,
-                                )),
-                          ),
-                        ],
-                      ),)
-                ),
-              ),
-              header: Container(
-                color: Colors.white.withOpacity(0),
-                child: Container(
-                  decoration: BoxDecoration(
                       color: Colors.black.withOpacity(.7),
-                      border: Border.all(width: 1,color: Colors.black),
-                      borderRadius: BorderRadius.all(Radius.circular(20))
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
+                    ),
+                    alignment: Alignment.center,
+                    child:Text(
+                      widget.Finalprodcut_name,
+                      style: TextStyle(color: Colors.white),
+                    ),
+
+                    height: 30,
                   ),
-                  alignment: Alignment.center,
-                  padding: EdgeInsets.all(4),
-                  child: Text(
-                    widget.Finalprodcut_name,
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  height: 30,
                 ),
-              ),
-            ),
+                Expanded(
+                  child:Padding(
+                    padding: EdgeInsets.only(top: 1,bottom: 1),
+                    child:  Image.asset(
+                      widget.Finalprodcut_picture,
+
+                      fit: BoxFit.cover
+                      ,
+
+                    ),
+                  )
+                ),
+                Container(
+                  decoration:
+                 BoxDecoration(
+                  color: Colors.black.withOpacity(.7),
+                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft: Radius.circular(20)),
+                ),
+                  height: 50,
+                  alignment: Alignment.center,
+                  child:Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.all(5),
+                      ),
+                      Text('Price: \$${widget.Finalprodcut_price}      ',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)),
+                       Text('From: \$${widget.Finalprodcut_oldprice}',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red,
+                            decoration: TextDecoration.lineThrough,
+                          )),
+
+
+                    ],
+                  ),
+                ),
+              ],
+            )
           ),
           //second button
           Divider(color: Colors.black),

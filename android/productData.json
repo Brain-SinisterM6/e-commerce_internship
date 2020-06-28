@@ -1,42 +1,43 @@
 [ {
+
           "prod_id":"1",
-          "name": "jewellery",
-          "picture": "images/images/products/acc1.jpg",
-          "old_price": "300",
-          "price": "240",
-          "detials":"consists of decorative items worn for personal adornment, such as brooches, rings, necklaces, earrings, pendants, bracelets, and cufflinks. Jewellery may be attached to the body or the clothes. From a western perspective, the term is restricted to durable ornaments, excluding flowers for example. For many centuries metal, often combined with gemstones, has been the normal material for jewellery, but other materials such as shells and other plant materials may be used"
-        },
+          "name": "Apple AirPods",
+            "picture": "images/Electronics/pic1.jpg",
+          "old_price": "2418.77",
+          "price": "3999.00",
+         "detials":"AirPods + Wireless Charging Case\nAutomatically on, automatically connected\nEasy setup for all your Apple devices\nQuick access to Siri by saying “Hey Siri”\nDouble-tap to play or skip forward\nNew Apple H1 headphone chip delivers faster wireless connection to your devices\nCharges quickly in the case\nCase can be charged using the Lightning connector"
+         },
         {
           "prod_id":"2",
-          "name": "ring",
-          "picture": "images/images/products/acc2.jpg",
-          "old_price": "500",
-          "price": "340",
-          "detials":"A ring is a round band, usually of metal, worn as ornamental jewellery. The term 'ring' by itself always denotes jewellery worn on the finger; when worn as an ornament elsewhere, the body part is specified"
+          "name": "Wyze Cam 1080p HD",
+          "picture": "images/Electronics/pic2.jpg",
+          "old_price": "600",
+          "price": "500",
+          "detials":"Indoor Wireless Smart Home Camera with Night Vision, 2-Way Audio, Works with Alexa & the Google Assistant, One Pack, White - WYZEC2"
         },
         {
           "prod_id":"3",
-          "name": "dress1",
-          "picture": "images/images/products/dress1.jpeg",
-          "old_price": "300",
-          "price": "240",
-          "detials":"is a garment traditionally worn by women or girls consisting of a skirt with an attached bodice (or a matching bodice giving the effect of a one-piece garment)"
+          "name": "Acer Aspire 5 Slim Laptop",
+          "picture": "images/Electronics/pic3.jpg",
+          "old_price": "7200",
+          "price": "7000",
+          "detials":"Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L,Silver"
         },
         {
           "prod_id":"4",
-          "name": "dress",
-          "picture": "images/images/products/dress2.jpeg",
-          "old_price": "800",
-          "price": "700",
-          "detials":"It consists of a top piece that covers the torso and hangs down over the legs. A dress can be any one-piece garment containing a skirt of any length and can be formal or casual."
+          "name": "PlayStation 4 Slim 1TB",
+          "picture": "images/Electronics/pic4.jpg",
+          "old_price": "6000",
+          "price": "5500",
+          "detials":"Incredible games; Endless entertainment\nAll new lighter slimmer PS4\n1TB hard drive\nAll the greatest, games, TV, music and more"
         },
         {
           "prod_id":"5",
-          "name": "blazer",
-          "picture": "images/images/products/blazer1.jpeg",
-          "old_price": "600",
-          "price": "540",
-          "detials":"A blazer is a type of jacket resembling a suit jacket, but cut more casually. A blazer is generally distinguished from a sport coat as a more formal garment and tailored from solid colour fabrics."
+          "name": "DualShock 4 Wireless",
+          "picture": "images/Electronics/pic5.jpg",
+          "old_price": "1000",
+          "price": "990",
+          "detials":"The feel, shape, and sensitivity of the dual analog sticks and trigger buttons have been improved to provide a greater sense of control, no matter what you play\nThe new multi touch and clickable touch pad on the face of the DualShock 4 Wireless Controller opens up worlds of new gameplay possibilities for both newcomers and veteran gamers\nThe DualShock 4 Wireless Controller features a built in speaker and stereo headset jack, putting several new audio options in the player's hands\nThe Dualshock 4 wireless controller can be easily recharged by plugging it into your PlayStation 4 system, even when in rest mode, or with any standard charger using a USB cable (type A to micro B sold separately)"
         },
         {
           "prod_id":"6",
