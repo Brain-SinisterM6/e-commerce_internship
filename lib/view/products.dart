@@ -1,4 +1,4 @@
- import 'package:ecommerceapp/controller/MyData.dart';
+ import 'file:///G:/MyCode/ecommerceapp/ecommerceapp/lib/model/MyData.dart';
 import 'package:ecommerceapp/controller/UserId_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,10 +8,10 @@ import 'package:provider/provider.dart';
 import 'ProductDetails.dart';
 
 class prodcuts extends StatefulWidget {
-  int cnt;
+  String category;
   String loginUserId;
 
-  prodcuts(this.cnt  );
+  prodcuts(this.category  );
 
 
   _prodcutsState createState() =>   _prodcutsState( );
@@ -21,13 +21,13 @@ class _prodcutsState extends State<prodcuts> {
   int cnt;
   bool checkdata=false;
   var produc_list = [];
+  var produc_list2=[];
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
-    print("${3999.0+2}");
     widget.loginUserId= Provider.of<getuserid>(context,listen: false ).GetData();
     setState(() {
       getProductData();
@@ -78,6 +78,15 @@ class _prodcutsState extends State<prodcuts> {
   Future getProductData () async {
 
     produc_list=await MyData().myData();
+    for(int i=0;i<produc_list.length;i++)
+    {
+      if(produc_list[i]['category']==widget.category)
+      {
+        produc_list2.add(produc_list[i]);
+      }
+    }
+    if(produc_list2.length!=0)
+      produc_list=produc_list2;
     setState(() {
 
     });

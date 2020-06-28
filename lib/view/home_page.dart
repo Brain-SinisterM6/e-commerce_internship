@@ -15,7 +15,7 @@ import 'myFav.dart';
 import 'products.dart';
 
 class HomePage extends StatefulWidget {
-  int counterToGetCategory;
+  String category;
   String loginUserId;
   Uint8List  imagefile;
   String GetName='';
@@ -23,14 +23,14 @@ class HomePage extends StatefulWidget {
   String Getpass='';
   String Getpic='';
   List Getorder=[];
-  HomePage(this.counterToGetCategory );
+  HomePage(this.category );
 
-  _HomePageState createState() => new _HomePageState(counterToGetCategory);
+  _HomePageState createState() =>   _HomePageState(category);
 }
 
 class _HomePageState extends State<HomePage> {
   String myCat='Categories';
-  int counterToGetCategory;
+  String category;
   @override
   void initState() {
     super.initState();
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
   }
 
 
-  _HomePageState(this.counterToGetCategory);
+  _HomePageState(this.category);
 
   @override
   Widget build(BuildContext context) {
@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                   child:  DropdownButton<String>(
                     icon: Icon(Icons.arrow_drop_down,),
                     hint: Text(myCat,style: TextStyle(  color: Colors.black),),
-                    items: <String>['All products','Accessories', 'Books', 'Clothes', 'Elec','Home','Mobile','Sports'].map((String value) {
+                    items: <String>['All products','Electronics', 'Clothes', 'Games', 'Books','Kitchen'].map((String value) {
                       return new DropdownMenuItem<String>(
                         value: value,
                         child: new Text(value),
@@ -145,33 +145,7 @@ class _HomePageState extends State<HomePage> {
                     }).toList(),
                     onChanged: (value) {
                       setState(() {
-                        if(value=='All products')
-                          counterToGetCategory=1;
-
-                        if(value=='Accessories')
-                          counterToGetCategory=2;
-
-                        if(value=='Clothes')
-                          counterToGetCategory=3;
-
-                        if(value=='Books')
-                          counterToGetCategory=4;
-
-                        if(value=='Sports')
-                          counterToGetCategory=5;
-
-                        if(value=='Home')
-                          counterToGetCategory=6;
-
-                        if(value=='Mobile')
-                          counterToGetCategory=7;
-
-                        if(value=='Elec')
-                          counterToGetCategory=8;
-
-                        myCat=value;
-
-                      //  Navigator.push(context, new MaterialPageRoute(builder: (context)=>HomePage(counterToGetCategory,widget.loginUserId)));
+                   Navigator.push(context,   MaterialPageRoute(builder: (context)=>HomePage(value)));
                       });
                     },
                   ),
@@ -269,7 +243,7 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               alignment: Alignment.topLeft,
               child: Text(
-                'Products',
+                'Products   >> ${category}',
                 style:
                 TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
@@ -278,7 +252,7 @@ class _HomePageState extends State<HomePage> {
           //grid view
           // l list ele bt3rd l 7gat
           Flexible(
-            child: prodcuts(counterToGetCategory  ),
+            child: prodcuts(category  ),
           ),
         ],
       ),

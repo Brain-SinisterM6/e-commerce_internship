@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:ecommerceapp/controller/CartProvider.dart';
 import 'package:ecommerceapp/view/home_page.dart';
 import 'package:ecommerceapp/view/login.dart';
@@ -19,7 +21,7 @@ void main() {
       child: MaterialApp(
       title: 'E-commerce ',
 
-      home: HomePage(1),
+      home: login(),
       routes:
       {
      //   '/homepage': (context) => HomePage(1,''),

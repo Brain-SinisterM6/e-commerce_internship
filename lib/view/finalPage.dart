@@ -101,7 +101,7 @@ class finalPageState extends State<finalPage> {
 
                         MaterialPageRoute(
                           builder: (context) =>
-                            HomePage(1 )));
+                            HomePage('All Products')));
                 },
 
 

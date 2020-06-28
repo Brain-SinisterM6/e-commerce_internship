@@ -1,7 +1,7 @@
 
 import 'package:ecommerceapp/controller/CartProvider.dart';
 import 'package:ecommerceapp/controller/FavProvider.dart';
-import 'package:ecommerceapp/controller/MyData.dart';
+import 'file:///G:/MyCode/ecommerceapp/ecommerceapp/lib/model/MyData.dart';
 import 'package:ecommerceapp/view/shoppingCart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +57,7 @@ class _ProductDetailsState extends State<ProductDetails> {
             //passing values
 
                 MaterialPageRoute(
-                  builder: (context) =>   HomePage(1 ))),
+                  builder: (context) =>   HomePage('All Products' ))),
         ),
         title: InkWell(
           child: Text('Amro shop'),
@@ -343,7 +343,7 @@ class _ProductDetailsState extends State<ProductDetails> {
           ),
           // bnadi 3lehom tani
           Container(
-            child: prodcuts(1 ),
+            child: prodcuts('All Products' ),
             height: 300,
           ),
         ],

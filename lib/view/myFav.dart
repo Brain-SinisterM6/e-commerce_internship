@@ -37,7 +37,7 @@ class  _favState extends State<fav>{
             onPressed: () => Navigator.of(context).push(
               //passing values
                   MaterialPageRoute(
-                    builder: (context) =>  HomePage(1))),
+                    builder: (context) =>  HomePage('All Products'))),
 
           ),
           title: InkWell(
@@ -66,7 +66,7 @@ class  _favState extends State<fav>{
                     Navigator.of(context).push(
                       //passing values
                           MaterialPageRoute(
-                            builder: (context) => HomePage(1)));
+                            builder: (context) => HomePage('all')));
                   },
                 ),
                 color: Colors.black ,

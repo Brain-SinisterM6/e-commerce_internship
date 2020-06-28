@@ -248,7 +248,7 @@ class loginState extends State<login> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                HomePage(1)));
+                                                HomePage('All Products')));
                                   }
                                   else {
                                     if (_pass != '' && _email != '') {

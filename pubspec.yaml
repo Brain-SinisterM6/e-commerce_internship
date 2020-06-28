@@ -78,32 +78,23 @@ flutter:
     - images/Electronics/pic4.jpg
     - images/Electronics/pic5.jpg
 
-    - images/images/cats/accessories.png
-    - images/images/cats/books.png
-    - images/images/cats/clothes.png
-    - images/images/cats/elec.png
-    - images/images/cats/home.png
-    - images/images/cats/mobile.png
-    - images/images/cats/sports.png
-    - images/images/products/acc1.jpg
-    - images/images/products/acc2.jpg
-    - images/images/products/book1.jpg
-    - images/images/products/book2.jpg
-    - images/images/products/book3.jpg
-    - images/images/products/blazer1.jpeg
-    - images/images/products/blazer2.jpeg
-    - images/images/products/dress1.jpeg
-    - images/images/products/dress2.jpeg
-    - images/images/products/lap1.jpg
-    - images/images/products/lap2.jpg
-    - images/images/products/frid1.jpg
-    - images/images/products/frid2.jpg
-    - images/images/products/mic1.jpg
-    - images/images/products/wash1.jpg
-    - images/images/products/mob1.jpg
-    - images/images/products/mob2.jpg
-    - images/images/products/pes20.jpg
-    - images/images/products/fif20.jpg
+    - images/Clothes/pic1.jpg
+    - images/Clothes/pic2.jpg
+    - images/Clothes/pic3.jpg
+    - images/Clothes/pic4.jpg
+
+    - images/Games/pic1.jpg
+    - images/Games/pic2.jpg
+    - images/Games/pic3.jpg
+    - images/Games/pic4.jpg
+
+    - images/Books/pic1.jpg
+    - images/Books/pic2.jpg
+
+    - images/Kitchen/pic1.jpg
+    - images/Kitchen/pic2.jpg
+
+
     - android/productData.json
 
   # An image asset can refer to one or more resolution-specific "variants", see

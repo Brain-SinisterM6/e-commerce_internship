@@ -91,7 +91,7 @@ class MyaccState extends State<Myacc>{
               child: MaterialButton(
                 onPressed: () async {
                     Future.delayed(  Duration(seconds: 3), () {
-                    Navigator.pushReplacement(context,   MaterialPageRoute(builder: (context)=>HomePage(1)));
+                    Navigator.pushReplacement(context,   MaterialPageRoute(builder: (context)=>HomePage('All Products')));
 
                   });
 

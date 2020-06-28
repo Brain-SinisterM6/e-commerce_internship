@@ -42,7 +42,7 @@ class  _cartState extends State<cart>{
             onPressed: () => Navigator.of(context).push(
               //passing values
                   MaterialPageRoute(
-                    builder: (context) =>HomePage(1))),
+                    builder: (context) =>HomePage('All Products'))),
 
           ),
           title: InkWell(

@@ -5,6 +5,7 @@
             "picture": "images/Electronics/pic1.jpg",
           "old_price": "2418.77",
           "price": "3999.00",
+          "category": "Electronics",
          "detials":"AirPods + Wireless Charging Case\nAutomatically on, automatically connected\nEasy setup for all your Apple devices\nQuick access to Siri by saying “Hey Siri”\nDouble-tap to play or skip forward\nNew Apple H1 headphone chip delivers faster wireless connection to your devices\nCharges quickly in the case\nCase can be charged using the Lightning connector"
          },
         {
@@ -13,6 +14,7 @@
           "picture": "images/Electronics/pic2.jpg",
           "old_price": "600",
           "price": "500",
+          "category": "Electronics",
           "detials":"Indoor Wireless Smart Home Camera with Night Vision, 2-Way Audio, Works with Alexa & the Google Assistant, One Pack, White - WYZEC2"
         },
         {
@@ -21,6 +23,7 @@
           "picture": "images/Electronics/pic3.jpg",
           "old_price": "7200",
           "price": "7000",
+          "category": "Electronics",
           "detials":"Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L,Silver"
         },
         {
@@ -29,6 +32,7 @@
           "picture": "images/Electronics/pic4.jpg",
           "old_price": "6000",
           "price": "5500",
+          "category": "Electronics",
           "detials":"Incredible games; Endless entertainment\nAll new lighter slimmer PS4\n1TB hard drive\nAll the greatest, games, TV, music and more"
         },
         {
@@ -37,121 +41,116 @@
           "picture": "images/Electronics/pic5.jpg",
           "old_price": "1000",
           "price": "990",
+          "category": "Electronics",
           "detials":"The feel, shape, and sensitivity of the dual analog sticks and trigger buttons have been improved to provide a greater sense of control, no matter what you play\nThe new multi touch and clickable touch pad on the face of the DualShock 4 Wireless Controller opens up worlds of new gameplay possibilities for both newcomers and veteran gamers\nThe DualShock 4 Wireless Controller features a built in speaker and stereo headset jack, putting several new audio options in the player's hands\nThe Dualshock 4 wireless controller can be easily recharged by plugging it into your PlayStation 4 system, even when in rest mode, or with any standard charger using a USB cable (type A to micro B sold separately)"
         },
         {
           "prod_id":"6",
-          "name": "Jacket",
-          "picture": "images/images/products/blazer2.jpeg",
+          "name": "Volcom Men's Frickin SNT",
+          "picture": "images/Clothes/pic1.jpg",
           "old_price": "400",
           "price": "350",
-          "detials":"Blazers often have naval-style metal buttons to reflect their origins as jackets worn by boating club membersA blazers cloth is usually durable, as it is intended as outdoor wear."
+          "category": "Clothes",
+          "detials":"50% Polyester, 30% Polyester, 12% Cotton, 8% Elastane\nImported\nButton Fly closure\nMachine Wash\n21\" Outseam\n4 way stretch\nMade with reprieve recycled fibers"
         },
         {
           "prod_id":"7",
-          "name": "math book",
-          "picture": "images/images/products/book1.jpg",
-          "old_price": "120",
-          "price": "100",
-          "detials":"Mathematics (from Greek μάθημα máthēma, 'knowledge, study, learning') includes the study of such topics as quantity (number theory),[1] structure (algebra),[2] space (geometry),[1] and change (mathematical analysis).[3][4][5] It has no generally accepted definition."
+          "name": "Volcom Men's Single Stone",
+          "picture": "images/Clothes/pic2.jpg",
+          "old_price": "1200",
+          "price": "1000",
+          "category": "Clothes",
+          "detials":"80% Cotton/ 20% Polyester\nImported\nPull On closure\nMachine Wash\nRegular fit fleece pant\nExterior draw cord & elastic cuffs\nRear patch pocket"
         },
         {
           "prod_id":"8",
-          "name": "English book",
-          "picture": "images/images/products/book2.jpg",
-          "old_price": "240",
-          "price": "90",
-          "detials":"English is a West Germanic language that was first spoken in early medieval England and eventually became a global lingua franca.[4][5] It is named after the Angles"
+          "name": "iCreek Rain Suit Jacket",
+          "picture": "images/Clothes/pic3.jpg",
+          "old_price": "2400",
+          "price": "2300",
+          "category": "Clothes",
+          "detials":"Waterproof : Waterproof and comfortable the fabric is not only waterproof, and also soft and comfortable. Even if you use it in the rain, there is no worries to get wet.【Now we have changed the size of American Standard, the old size has been all offline.】"
         },
         {
           "prod_id":"9",
-          "name": "rains",
-          "picture": "images/images/products/book3.jpg",
-          "old_price": "300",
-          "price": "240",
-          "detials":"Rain is liquid water in the form of droplets that have condensed from atmospheric water vapor and then become heavy enough to fall under gravity"
+          "name": "Little Girls Off Shoulder",
+          "picture": "images/Clothes/pic4.jpg",
+          "old_price": "700",
+          "price": "650",
+          "category": "Clothes",
+          "detials":"Material:cotton,polyester,denim,soft and comfortable\nPullover with ruffle collar,ripped and plaid design,your adorable sweetie must love it\nGreat for daily wearing,casual,birthday,christmas,party,beach,traveling and photograhy\nFit 1-7 years old kids little girls,please refer to our size chart before order\n2pcs/set:toddler little girls long sleeve plaid shirts +ripped jeans pants"
         },
         {
           "prod_id":"10",
-          "name": "fifa20",
-          "picture": "images/images/products/fif20.jpg",
-          "old_price": "300",
-          "price": "240",
-          "detials":"Powered by Frostbite™*, EA SPORTS™ FIFA 20 for the PlayStation 4, Xbox One, and PC brings two sides of The Worlds Game to life - the prestige of the professional stage and an all-new authentic street football experience in EA SPORTS VOLTA FOOTBALL."
+          "name": "Fifa 20",
+          "picture": "images/Games/pic2.jpg",
+          "old_price": "2000",
+          "price": "1900",
+          "category": "Games",
+          "detials":"This year FIFA 20 brings two sides of The World’s Game to life, the prestige of the professional stage and an all new authentic street soccer experience in EA SPORTS VOLTA\nEA SPORTS VOLTA takes soccer back to the streets representing the authentic culture, creativity and style\nIn EA SPORTS VOLTA, you can build your character, express your style, and play various forms of free flowing soccer in environments all over the world"
         },
         {
           "prod_id":"11",
-          "name": "pes2020",
-          "picture": "images/images/products/pes20.jpg",
-          "old_price": "150",
-          "price": "80",
-          "detials":"*Featured Players obtained in eFootball PES 2020 are only usable in ... data is frequently synchronised with real world football data through PES Live Updates."
+          "name": "Pes 2020",
+          "picture": "images/Games/pic1.jpg",
+          "old_price": "1500",
+          "price": "1400",
+          "category": "Games",
+          "detials":"remastered master League mode - Create and customise sponsor logos that will be displayed on the media backdrop during interviews and on the master League main menu screen\n- customise manager models with a greater level of freedom thanks to high-performance 3D scanning technology to capture images of individuals of varying body shapes and sizes"
         },
         {
           "prod_id":"12",
-          "name": "fridge",
-          "picture": "images/images/products/frid1.jpg",
-          "old_price": "5000",
-          "price": "3000",
-          "detials":"A refrigerator (colloquially fridge) consists of a thermally insulated compartment and a heat pump (mechanical, electronic or chemical) that transfers heat from the inside of the fridge to its external environment so that the inside of the fridge"
+          "name": "Cyberpunk 2077",
+          "picture": "images/Games/pic3.jpg",
+          "old_price": "700",
+          "price": "600",
+          "category": "Games",
+          "detials":"Cyberpunk 2077 is an open-world, action-adventure story set in Night City\nBecome a cyberpunk, an urban mercenary equipped with cybernetic enhancements and build your legend on the streets of Night City"
         },
         {
           "prod_id":"13",
-          "name": "fridge new",
-          "picture": "images/images/products/frid2.jpg",
-          "old_price": "3000",
-          "price": "2400",
-          "detials":"A refrigerator (colloquially fridge) consists of a thermally insulated compartment and a heat pump (mechanical, electronic or chemical) that transfers heat from the inside of the fridge to its external environment so that the inside of the fridge"
+          "name": "Death Stranding",
+          "picture": "images/Games/pic4.jpg",
+          "old_price": "700",
+          "price": "600",
+          "category": "Games",
+          "detials":"\"picture\": \"images/Games/pic4.jpg\",\n          \"old_price\": \"700\",\n          \"price\": \"600\",\n          \"category\": \"Games\","
         },
-        {
-          "prod_id":"14",
-          "name": "microwave",
-          "picture": "images/images/products/mic1.jpg",
-          "old_price": "900",
-          "price": "800",
-          "detials":"Microwaves are a form of electromagnetic radiation with wavelengths ranging from about one meter to one millimeter; with frequencies between 300 MHz (1 m) and 300 GHz (1 mm).[1][2][3][4][5] Different sources define different frequency ranges as microwaves"
-        },
-        {
-          "prod_id":"15",
-          "name": "machine",
-          "picture": "images/images/products/wash1.jpg",
-          "old_price": "3000",
-          "price": "2400",
-          "detials":"A washing machine (laundry machine, clothes washer, or washer) is a home appliance used to wash laundry. The term is mostly applied to machines that use water as opposed to dry cleaning (which uses alternative cleaning fluids and is performed by specialist businesses) or ultrasonic cleaners"
-        },
-        {
-
-          "prod_id":"16",
-          "name": "iphone11",
-          "picture": "images/images/products/mob1.jpg",
-          "old_price": "12000",
-          "price": "11400",
-          "detials":"The iPhone 11 is a smartphone designed, developed, and marketed by Apple Inc. It is the thirteenth generation lower-priced iPhone, succeeding the iPhone XR. It was unveiled on September 10, 2019,"
-        },
-        {
-          "prod_id":"17",
-          "name": "samsung s10",
-          "picture": "images/images/products/mob2.jpg",
-          "old_price": "9000",
-          "price": "8400",
-          "detials":"Samsung (Korean: 삼성; Hanja: 三星; Korean pronunciation: [samsʌŋ]; means 'three stars' in English) is a South Korean multinational conglomerate headquartered in Samsung Town, Seoul.[1] It comprises numerous affiliated businesses,"
-        },
-        {
-          "prod_id":"18",
-          "name": "labtop hp",
-          "picture": "images/images/products/lap1.jpg",
-          "old_price": "3000",
-          "price": "2400",
-          "detials":"A laptop (also laptop computer), often called a notebook, is a small, portable personal computer (PC) with a 'clamshell' form factor, typically having a thin LCD or LED computer screen mounted on the inside of the upper lid "
-        },
-        {
-          "prod_id":"19",
-          "name": "laptop dell",
-          "picture": "images/images/products/lap2.jpg",
-          "old_price": "4000",
-          "price": "3400",
-          "detials":"A laptop (also laptop computer), often called a notebook, is a small, portable personal computer (PC) with a 'clamshell' form factor, typically having a thin LCD or LED computer screen mounted on the inside of the upper lid"
-        }
-
+  {
+    "prod_id":"14",
+    "name": "The Water Dancer",
+    "picture": "images/Books/pic1.jpg",
+    "old_price": "200",
+    "price": "190",
+    "category": "Books",
+    "detials":" NEW YORK TIMES BESTSELLER • OPRAH’S BOOK CLUB PICK • From the National Book Award–winning author of Between the World and Me, a boldly conjured debut novel about a magical gift, a devastating loss, and an underground war for freedom."
+  },
+  {
+    "prod_id":"15",
+    "name": "Olive, Again",
+    "picture": "images/Books/pic2.jpg",
+    "old_price": "700",
+    "price": "600",
+    "category": "Books",
+    "detials":"Strout managed to make me love this strange woman I’d never met, who I knew nothing about. What a terrific writer she is"
+  },
+  {
+    "prod_id":"16",
+    "name": "Brita Water Replacement Filters",
+    "picture": "images/Kitchen/pic1.jpg",
+    "old_price": "700",
+    "price": "600",
+    "category": "Kitchen",
+    "detials":"BPA FREE: Enjoy BPA free Brita Standard Replacement Filters made to fit all Brita pitchers and dispensers except Brita Stream pitchers. Height 5.31; Width 2.31; Length/Depth 2.31; Weight .13 pounds\nCLEANER: Only Brita filters are certified to reduce Chlorine (taste and odor), Copper, Mercury, Zinc and Cadmium. Contaminants reduced may not be in all users' water "
+  },
+  {
+    "prod_id":"17",
+    "name": "Dash Mini Maker",
+    "picture": "images/Kitchen/pic2.jpg",
+    "old_price": "1300",
+    "price": "1200",
+    "category": "Kitchen",
+    "detials":"MORE THAN WAFFLES: Make paninis, hash browns, and even biscuit pizzas! Any wet batter will “waffle” your treats and snacks into single serving portions. Great for kids or on the go!\nCOMPACT + LIGHTWEIGHT: Weighing 1lb+, this is a MUST-HAVE for that first apartment, smaller kitchen, college dorm life, or camper/RV traveling"
+  }
   
   ]

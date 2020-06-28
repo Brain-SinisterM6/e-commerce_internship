@@ -1,6 +1,6 @@
 
 
-import 'package:ecommerceapp/controller/userDB.dart';
+import 'file:///G:/MyCode/ecommerceapp/ecommerceapp/lib/model/userDB.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthProvider {
