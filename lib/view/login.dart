@@ -1,4 +1,3 @@
-
 import 'package:ecommerceapp/model/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -30,29 +29,29 @@ class loginState extends State<login> {
   String errorpass = '';
   String erroremail2 = null;
   String errorpass2 = null;
-  bool selected=false;
+  bool selected = false;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
         body: Stack(
-         children: <Widget>[
-           Image.asset(
+      children: <Widget>[
+        Image.asset(
           'images/logwb.png',
           fit: BoxFit.fill,
           width: double.infinity,
           height: double.infinity,
         ),
-           Container(
-          color: Colors.black.withOpacity(0.4),
+        Container(
+          color: Colors.black.withOpacity(0.2),
           width: double.infinity,
           height: double.infinity,
         ),
-           Container(
+        Container(
           alignment: Alignment.center,
-             child: ListView(
-               children: <Widget>[
-                 Padding(
+          child: ListView(
+            children: <Widget>[
+              Padding(
                   padding: EdgeInsets.fromLTRB(10, 100, 10, 10),
                   child: Row(
                     children: <Widget>[
@@ -60,7 +59,7 @@ class loginState extends State<login> {
                         radius: 20,
                         child: Icon(
                           Icons.email,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                         backgroundColor: Colors.white.withOpacity(0.4),
                       ),
@@ -87,14 +86,14 @@ class loginState extends State<login> {
                             enabledBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20)),
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.black),
+//                              borderSide:
+//                                  BorderSide(width: 1, color: Colors.black),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20)),
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.black),
+//                              borderSide:
+//                                  BorderSide(width: 1, color: Colors.black),
                             ),
                           ),
                           style: TextStyle(
@@ -111,7 +110,7 @@ class loginState extends State<login> {
                       ),
                     ],
                   )),
-                 Padding(
+              Padding(
                   padding: EdgeInsets.all(10),
                   child: Row(
                     children: <Widget>[
@@ -119,7 +118,7 @@ class loginState extends State<login> {
                         radius: 20,
                         child: Icon(
                           Icons.lock,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                         backgroundColor: Colors.white.withOpacity(0.4),
                       ),
@@ -136,7 +135,6 @@ class loginState extends State<login> {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                             errorText: _validatePass ? errorpass : errorpass2,
-
                             labelStyle: TextStyle(
                               color: Colors.black.withOpacity(0.7),
                               fontSize: 20,
@@ -146,14 +144,14 @@ class loginState extends State<login> {
                             enabledBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20)),
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.black),
+//                              borderSide:
+//                                  BorderSide(width: 1, color: Colors.black),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20)),
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.black),
+//                              borderSide:
+//                                  BorderSide(width: 1, color: Colors.black),
                             ),
                           ),
                           style: TextStyle(
@@ -177,7 +175,7 @@ class loginState extends State<login> {
                         child: IconButton(
                           icon: Icon(
                             Icons.remove_red_eye,
-                            color: Colors.black,
+                            color: Colors.white,
                           ),
                           onPressed: () {
                             setState(() {
@@ -192,91 +190,88 @@ class loginState extends State<login> {
                       ),
                     ],
                   )),
-                 Padding(
-                padding: EdgeInsets.all(10),
-                child:  SizedBox(
-                    width: double.infinity,
-                    height: 50,
-                    child: Container(
-                        child:  Consumer<getuserid>(builder:(context,data,widget){
-                          return RaisedButton(
-                              color: Colors.green,
-                              textColor: Colors.white,
-                              shape:   RoundedRectangleBorder(
-                                borderRadius:   BorderRadius.circular(30.0),
-                              ),
-                              child: Text(
-                                'Login',
-                                style: TextStyle(fontSize: 22),
-                              ),
-                              onPressed: () async {
-                                String _email = _emailController.text.toString();
-                                String _pass = _passwordController.text.toString();
-                                if (_email == '') {
-                                  setState(() {
-                                    erroremail = 'Email Can\'t Be Empty';
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 50,
+                  child: Container(
+                      child:
+                          Consumer<getuserid>(builder: (context, data, widget) {
+                        return RaisedButton(
+                            color: Colors.red,
+                            textColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            child: Text(
+                              'Login',
+                              style: TextStyle(fontSize: 22),
+                            ),
+                            onPressed: () async {
+                              String _email = _emailController.text.toString();
+                              String _pass =
+                                  _passwordController.text.toString();
+                              if (_email == '') {
+                                setState(() {
+                                  erroremail = 'Email Can\'t Be Empty';
 
-                                    _validateEmail = true;
-                                  });
+                                  _validateEmail = true;
+                                });
+                              } else {
+                                setState(() {
+                                  _validateEmail = false;
+                                });
+                              }
+                              if (_pass == '') {
+                                setState(() {
+                                  errorpass = 'Password Can\'t Be Empty';
+                                  _validatePass = true;
+                                });
+                              } else {
+                                setState(() {
+                                  _validatePass = false;
+                                });
+                              }
+                              if (_emailController.text.toString() != '' &&
+                                  _passwordController.text.toString() != '') {
+                                setState(() {
+                                  selected = true;
+                                });
+                                if (await AuthProvider()
+                                        .signInWithEmail(_email, _pass) !=
+                                    false) {
+                                  Provider.of<getuserid>(context, listen: false)
+                                      .addData(await AuthProvider()
+                                          .signInWithEmail(_email, _pass));
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              HomePage('All Products')));
                                 } else {
-                                  setState(() {
-                                    _validateEmail = false;
-                                  });
-                                }
-                                if (_pass == '') {
-                                  setState(() {
-                                    errorpass = 'Password Can\'t Be Empty';
-                                    _validatePass = true;
-                                  });
-                                } else {
-                                  setState(() {
-                                    _validatePass = false;
-                                  });
-                                }
-                                if (_emailController.text.toString() != '' &&
-                                    _passwordController.text.toString() != '') {
-
-                                  setState(() {
-                                    selected=true;
-                                  });
-                                  if (await AuthProvider()
-                                      .signInWithEmail(_email, _pass) !=
-                                      false) {
-                                    Provider.of<getuserid>(context,listen: false ).addData(await AuthProvider()
-                                        .signInWithEmail(_email, _pass));
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                HomePage('All Products')));
-                                  }
-                                  else {
-                                    if (_pass != '' && _email != '') {
-
-                                      print("no");
-                                      errorpass2 = 'check your password';
-                                      erroremail2 = 'check your email';
-                                      setState(() {
-                                        _validatePass = false;
-                                      });
-                                    }
+                                  if (_pass != '' && _email != '') {
+                                    print("no");
+                                    errorpass2 = 'check your password';
+                                    erroremail2 = 'check your email';
+                                    setState(() {
+                                      _validatePass = false;
+                                    });
                                   }
                                 }
-                              });
-                        }),
-                        width: double.infinity,
-                        height: 30),
-                  ) ,
+                              }
+                            });
+                      }),
+                      width: double.infinity,
+                      height: 30),
+                ),
               ),
-                 Padding(
+              Padding(
                 padding: EdgeInsets.all(10),
                 child: InkWell(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                register()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => register()));
                   },
                   child: Text(
                     "Don't have an account ? , Sign Up",
@@ -306,21 +301,20 @@ class loginState extends State<login> {
                   ),
                 ),
               ),
-                 Container(
-                   child:
-                   selected? SpinKitThreeBounce(
-                     color: Colors.white,
-                     size: 50.0,
-                   ):null,
-                 ),
+              Container(
+                child: selected
+                    ? SpinKitThreeBounce(
+                        color: Colors.white,
+                        size: 50.0,
+                      )
+                    : null,
+              ),
             ],
           ),
           color: Colors.black.withOpacity(0.4),
           width: double.infinity,
           height: double.infinity,
         ),
-
-
       ],
     ));
   }

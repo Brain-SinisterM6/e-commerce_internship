@@ -1,4 +1,3 @@
-
 import 'dart:io';
 import 'package:ecommerceapp/model/firebase_auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -11,6 +10,7 @@ import 'package:path/path.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'login.dart';
+
 class register extends StatefulWidget {
   registerState createState() => new registerState();
 }
@@ -24,13 +24,13 @@ class registerState extends State<register> {
   bool _validateEmail = false;
   bool _validatePass = false;
   bool _validateCPass = false;
-  var addPhoto='';
+  var addPhoto = '';
   final _formKey = GlobalKey<FormState>();
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   File _image;
   final picker = ImagePicker();
-  bool selected=false;
-  bool added=false;
+  bool selected = false;
+  bool added = false;
   @override
   void initState() {
     super.initState();
@@ -47,15 +47,15 @@ class registerState extends State<register> {
 
       setState(() {
         _image = File(image.path);
-        addPhoto='Photo added ';
-        added=true;
+        addPhoto = 'Photo added ';
+        added = true;
       });
     }
 
     Future uploadPic(BuildContext context) async {
       String fileName = basename(_image.path);
       StorageReference firebaseStorageRef =
-      FirebaseStorage.instance.ref().child(_emailController.text);
+          FirebaseStorage.instance.ref().child(_emailController.text);
       StorageUploadTask uploadTask = firebaseStorageRef.putFile(_image);
       StorageTaskSnapshot taskSnapshot = await uploadTask.onComplete;
     }
@@ -91,7 +91,6 @@ class registerState extends State<register> {
                 height: 70,
                 child: MaterialButton(
                   onPressed: () async {
-
                     if (_nameController.text == '') {
                       setState(() {
                         _validateName = true;
@@ -130,49 +129,55 @@ class registerState extends State<register> {
                       });
                     }
 
-                    if (_passwordController.text.toString() == _ConfirmPassController.text.toString() && _passwordController.text.length != 0) {
-                      if (_emailController.text.length != 0 && _nameController.text.length != 0)
-                      {
-                        if(_passwordController.text.length>5) {
+                    if (_passwordController.text.toString() ==
+                            _ConfirmPassController.text.toString() &&
+                        _passwordController.text.length != 0) {
+                      if (_emailController.text.length != 0 &&
+                          _nameController.text.length != 0) {
+                        if (_passwordController.text.length > 5) {
                           setState(() {
-
-                            selected=true;
+                            selected = true;
                           });
                           String checkuser = await AuthProvider().signup(
-                            _nameController.text.toString(),
+                              _nameController.text.toString(),
                               _emailController.text.toString(),
                               _passwordController.text.toString());
-                          if (checkuser=='false') {
+                          if (checkuser == 'false') {
                             setState(() {
-
-                              selected=false;
+                              selected = false;
                             });
-                            showModalBottomSheet(context: context,
+                            showModalBottomSheet(
+                                context: context,
                                 builder: (BuildContext context) {
                                   return Container(
                                     child: Column(
                                       children: <Widget>[
-                                        Expanded(child: Text("The email address is already in use by another account Or check it",
-                                          style: TextStyle(fontSize: 18,
-                                              fontWeight: FontWeight.bold),),),
-                                        Expanded(child: FlatButton(
-                                          onPressed: () =>
-                                              Navigator.pop(context),
-                                          child: Text("close", style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.green)),
-                                        ),),
+                                        Expanded(
+                                          child: Text(
+                                            "The email address is already in use by another account Or check it",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: FlatButton(
+                                            onPressed: () =>
+                                                Navigator.pop(context),
+                                            child: Text("close",
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.red)),
+                                          ),
+                                        ),
                                       ],
-
                                     ),
-
                                     height: 80,
                                   );
                                 });
                             return null;
-                          }
-                          else {
+                          } else {
                             uploadPic(context);
                             Navigator.pushReplacement(
                                 context,
@@ -180,8 +185,7 @@ class registerState extends State<register> {
                                     builder: (context) => login()));
                             return null;
                           }
-                        }
-                        else{
+                        } else {
                           showModalBottomSheet(
                               context: context,
                               builder: (BuildContext context) {
@@ -191,18 +195,20 @@ class registerState extends State<register> {
                                       Expanded(
                                         child: Text(
                                           "Password should be at least 6 characters",
-                                          style:
-                                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ),
                                       Expanded(
                                         child: FlatButton(
-                                          onPressed: () => Navigator.pop(context),
+                                          onPressed: () =>
+                                              Navigator.pop(context),
                                           child: Text("close",
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   fontWeight: FontWeight.bold,
-                                                  color: Colors.green)),
+                                                  color: Colors.red)),
                                         ),
                                       ),
                                     ],
@@ -213,14 +219,10 @@ class registerState extends State<register> {
                         }
                       }
 
-
                       return null;
                       // ignore: missing_return
-                    }
-                    else {
-
-                      if(_passwordController.text.length>5)
-                      {
+                    } else {
+                      if (_passwordController.text.length > 5) {
                         showModalBottomSheet(
                             context: context,
                             builder: (BuildContext context) {
@@ -230,8 +232,9 @@ class registerState extends State<register> {
                                     Expanded(
                                       child: Text(
                                         "The password does not match",
-                                        style:
-                                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
                                       ),
                                     ),
                                     Expanded(
@@ -241,7 +244,7 @@ class registerState extends State<register> {
                                             style: TextStyle(
                                                 fontSize: 18,
                                                 fontWeight: FontWeight.bold,
-                                                color: Colors.green)),
+                                                color: Colors.red)),
                                       ),
                                     ),
                                   ],
@@ -252,7 +255,6 @@ class registerState extends State<register> {
                       }
                       return "the password does not match";
                     }
-
                   },
                   child: Text(
                     'Sign up',
@@ -263,9 +265,9 @@ class registerState extends State<register> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  color: Colors.green,
+                  color: Colors.red,
                 ),
-                color: Colors.green,
+                color: Colors.red,
               ),
             ),
           ],
@@ -325,7 +327,6 @@ class registerState extends State<register> {
                                   errorText: _validateName
                                       ? 'Name Can\'t Be Empty'
                                       : null,
-
                                   labelStyle: TextStyle(
                                     color: Colors.black.withOpacity(0.7),
                                     fontSize: 24,
@@ -334,13 +335,13 @@ class registerState extends State<register> {
                                   fillColor: Colors.white.withOpacity(0.3),
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                        BorderRadius.all(Radius.circular(20)),
                                     borderSide: BorderSide(
                                         width: 1, color: Colors.black),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                        BorderRadius.all(Radius.circular(20)),
                                     borderSide: BorderSide(
                                         width: 1, color: Colors.black),
                                   ),
@@ -386,7 +387,6 @@ class registerState extends State<register> {
                                   errorText: _validateEmail
                                       ? 'Email Can\'t Be Empty'
                                       : null,
-
                                   labelStyle: TextStyle(
                                     color: Colors.black.withOpacity(0.7),
                                     fontSize: 24,
@@ -395,13 +395,13 @@ class registerState extends State<register> {
                                   fillColor: Colors.white.withOpacity(0.3),
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                        BorderRadius.all(Radius.circular(20)),
                                     borderSide: BorderSide(
                                         width: 1, color: Colors.black),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                        BorderRadius.all(Radius.circular(20)),
                                     borderSide: BorderSide(
                                         width: 1, color: Colors.black),
                                   ),
@@ -458,7 +458,6 @@ class registerState extends State<register> {
                                   errorText: _validatePass
                                       ? 'Password Can\'t Be Empty'
                                       : null,
-
                                   labelStyle: TextStyle(
                                     color: Colors.black.withOpacity(0.7),
                                     fontSize: 24,
@@ -467,13 +466,13 @@ class registerState extends State<register> {
                                   fillColor: Colors.white.withOpacity(0.3),
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                        BorderRadius.all(Radius.circular(20)),
                                     borderSide: BorderSide(
                                         width: 1, color: Colors.black),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                        BorderRadius.all(Radius.circular(20)),
                                     borderSide: BorderSide(
                                         width: 1, color: Colors.black),
                                   ),
@@ -520,7 +519,6 @@ class registerState extends State<register> {
                               child: TextFormField(
                                 decoration: InputDecoration(
                                   labelText: 'Confirm Password',
-
                                   enabled: true,
                                   errorText: _validateCPass
                                       ? 'confirm password Can\'t Be Empty'
@@ -529,7 +527,6 @@ class registerState extends State<register> {
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white),
-
                                   labelStyle: TextStyle(
                                     color: Colors.black.withOpacity(0.7),
                                     fontSize: 24,
@@ -538,13 +535,13 @@ class registerState extends State<register> {
                                   fillColor: Colors.white.withOpacity(0.3),
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                        BorderRadius.all(Radius.circular(20)),
                                     borderSide: BorderSide(
                                         width: 1, color: Colors.black),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                        BorderRadius.all(Radius.circular(20)),
                                     borderSide: BorderSide(
                                         width: 1, color: Colors.black),
                                   ),
@@ -589,24 +586,27 @@ class registerState extends State<register> {
                             ),
                             Expanded(
                               child: InkWell(
-                                child: Container  (
+                                child: Container(
                                   padding: EdgeInsets.fromLTRB(10, 0, 20, 0),
                                   decoration: BoxDecoration(
                                       color: Colors.white,
-                                      border: Border.all(width: 1, color: Colors.black),
-                                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                                      border: Border.all(
+                                          width: 1, color: Colors.black),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(20))),
                                   height: 50,
                                   child: Row(
                                     children: <Widget>[
                                       Text(
-                                       added? addPhoto: "Upload Photo ",
+                                        added ? addPhoto : "Upload Photo ",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold, fontSize: 18),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18),
                                       ),
                                       Icon(
                                         Icons.camera_alt,
                                         size: 30.0,
-                                        color: Colors.green,
+                                        color: Colors.red,
                                       ),
                                     ],
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -615,10 +615,8 @@ class registerState extends State<register> {
                                 onTap: () {
                                   setState(() {
                                     getImage();
-
                                   });
                                 },
-
                               ),
                             ),
                           ],
@@ -628,11 +626,12 @@ class registerState extends State<register> {
               ),
             ),
             Container(
-              child:
-              selected? SpinKitThreeBounce(
-                color: Hexcolor('#181616'),
-                size: 50.0,
-              ):null,
+              child: selected
+                  ? SpinKitThreeBounce(
+                      color: Hexcolor('#181616'),
+                      size: 50.0,
+                    )
+                  : null,
             ),
           ],
         ));

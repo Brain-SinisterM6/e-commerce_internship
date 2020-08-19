@@ -10,63 +10,61 @@ import 'home_page.dart';
 class finalPage extends StatefulWidget {
   String loginUserId;
   String ordernum;
-  String adddata="";
+  String adddata = "";
 
-  var mylist=[];
-  var mylist2=[];
-  var finallist=[];
+  var mylist = [];
+  var mylist2 = [];
+  var finallist = [];
 
-  int myLength=0;
+  int myLength = 0;
   var rng = new Random();
 
-  finalPage( this.mylist,this.mylist2);
+  finalPage(this.mylist, this.mylist2);
 
   finalPageState createState() => new finalPageState();
 }
 
 class finalPageState extends State<finalPage> {
-
   List<DynamicWidget> listdynamic = [];
 
   addDyanmic(String name) {
     listdynamic.add(new DynamicWidget(name));
   }
 
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    widget.loginUserId= Provider.of<getuserid>(context,listen: false ).GetData();
+    widget.loginUserId =
+        Provider.of<getuserid>(context, listen: false).GetData();
 
     //bgeb rkm lel order
     widget.ordernum = widget.rng.nextInt(100).toString();
 
     //list d feha l addrres wl city l mobile
-    widget.adddata+="Order num #${widget.ordernum} ";
+    widget.adddata += "Order num #${widget.ordernum} ";
     for (int i = 0; i < widget.mylist.length; i++) {
       addDyanmic(widget.mylist[i]);
-      widget.adddata+=widget.mylist[i];
+      widget.adddata += widget.mylist[i];
     }
 
 //list 2 feha l item lkol 7aga a5traha
-    for (int i = 0; i < widget.mylist2.length; i++){
+    for (int i = 0; i < widget.mylist2.length; i++) {
       addDyanmic(widget.mylist2[i]);
-      widget.adddata+=widget.mylist2[i];
+      widget.adddata += widget.mylist2[i];
     }
     // 3dd l text l h3mlha
     widget.myLength = (widget.mylist.length + widget.mylist2.length);
 
     // 3shan ab3t fl orders l 3mlha l user
     widget.finallist.add(widget.adddata);
-    Firestore.instance.collection('users')
+    Firestore.instance
+        .collection('users')
         .document(widget.loginUserId)
         .updateData({
-
-      'userId':widget.loginUserId,
-      'orders':FieldValue.arrayUnion(widget.finallist)
-    }
-    );
+      'userId': widget.loginUserId,
+      'orders': FieldValue.arrayUnion(widget.finallist)
+    });
   }
 
   @override
@@ -76,7 +74,7 @@ class finalPageState extends State<finalPage> {
       appBar: AppBar(
         //3shan l shadow bta3ha
         elevation: 0.1,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.red,
       ),
       bottomNavigationBar: Row(
         children: <Widget>[
@@ -97,14 +95,11 @@ class finalPageState extends State<finalPage> {
                 onTap: () {
                   print(widget.loginUserId);
                   Navigator.of(context).push(
-                    //passing values
+                      //passing values
 
-                        MaterialPageRoute(
-                          builder: (context) =>
-                            HomePage('All Products')));
+                      MaterialPageRoute(
+                          builder: (context) => HomePage('All Products')));
                 },
-
-
               ),
               color: Colors.black,
             ),
@@ -126,15 +121,14 @@ class finalPageState extends State<finalPage> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                color: Colors.green,
+                color: Colors.red,
               ),
-              color: Colors.green,
+              color: Colors.red,
             ),
           ),
         ],
       ),
       body: Container(
-
           alignment: Alignment.center,
           width: double.infinity,
           color: Colors.black.withOpacity(0.3),
@@ -142,11 +136,12 @@ class finalPageState extends State<finalPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-
               Container(
                 alignment: Alignment.center,
-                child: Text("Your Order Number Is #${widget.ordernum} ",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                child: Text(
+                  "Your Order Number Is #${widget.ordernum} ",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(width: 1, color: Colors.black),
@@ -154,14 +149,15 @@ class finalPageState extends State<finalPage> {
                 height: 80,
                 padding: EdgeInsets.all(10),
               ),
-              Padding(padding: EdgeInsets.all(10),),
+              Padding(
+                padding: EdgeInsets.all(10),
+              ),
               Container(
                 height: 150,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(width: 1, color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(20))
-                ),
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
                 padding: EdgeInsets.all(10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -171,8 +167,7 @@ class finalPageState extends State<finalPage> {
                         Expanded(
                           child: Text("Order Details",
                               style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold)),
+                                  fontSize: 18, fontWeight: FontWeight.bold)),
                         ),
                       ],
                     ),
@@ -187,17 +182,18 @@ class finalPageState extends State<finalPage> {
                       child: ListView.builder(
                         itemBuilder: (_, index) => listdynamic[index],
                         itemCount: widget.myLength,
-                      ),),
+                      ),
+                    ),
                   ],
                 ),
               ),
             ],
-
           )),
     );
-  }//////////////
+  } //////////////
 
 }
+
 class DynamicWidget extends StatelessWidget {
   String name;
 

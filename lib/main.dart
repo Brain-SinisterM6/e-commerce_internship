@@ -11,23 +11,13 @@ import 'package:ecommerceapp/controller/UserId_provider.dart';
 import 'controller/FavProvider.dart';
 
 void main() {
-  runApp(
-      MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (BuildContext context)=>getuserid()),
-          ChangeNotifierProvider(create: (BuildContext context)=>addCart()),
-          ChangeNotifierProvider(create: (BuildContext context)=>favCart()),
-          ],
-      child: MaterialApp(
-      title: 'E-commerce ',
-
-      home: login(),
-      routes:
-      {
-     //   '/homepage': (context) => HomePage(1,''),
+  runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (BuildContext context) => getuserid()),
+        ChangeNotifierProvider(create: (BuildContext context) => addCart()),
+        ChangeNotifierProvider(create: (BuildContext context) => favCart()),
+      ],
+      child: MaterialApp(title: 'E-commerce ', home: login(), routes: {
         '/login': (context) => login(),
-
-      })
-  ));
+      })));
 }
-
